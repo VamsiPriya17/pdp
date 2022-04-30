@@ -1,0 +1,22 @@
+{
+  "name": "Ecom",
+  "short_name": "Ecom",
+  "icons": [
+    {
+      "src": "img/delivery192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+
+    {
+      "src": "img/delivery512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#22c55e",
+  "background_color": "#22c55e",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
