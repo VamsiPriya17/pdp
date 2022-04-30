@@ -35,7 +35,7 @@ const router = useRouter()
                 }}
                 onSubmit = {async (values)=>{
                     try{
-                        axios.post(`${BASE_URI}/api/products`,values).then(()=>{
+                        axios.post(`${process.env.BASE_URI}/api/products`,values).then(()=>{
                             router.push('/seller')
                         })
 
