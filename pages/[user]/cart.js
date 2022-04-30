@@ -19,7 +19,7 @@ function cart() {
   useEffect(()=>{
     setLoading(1)
     if(router.query.user){ 
-      fetch(`${process.env.BASE_URI}/api/user/${router.query.user}/cart`,{
+      fetch(`https://basket-git-dev-santhosh-cloud.vercel.app/api/user/${router.query.user}/cart`,{
         method: 'GET',
         headers: {
           accept: 'application/json',
@@ -33,7 +33,7 @@ function cart() {
 
   const handleRequest = () =>{
     setRequest(1)
-    axios.get(`${process.env.BASE_URI}/api/user/${router.query.user}/cart?evaluate=true&product_id=${cartItems[0]._id}`).then((response)=>setOffer(response.data))
+    axios.get(`https://basket-git-dev-santhosh-cloud.vercel.app/api/user/${router.query.user}/cart?evaluate=true&product_id=${cartItems[0]._id}`).then((response)=>setOffer(response.data))
     
   }
 
