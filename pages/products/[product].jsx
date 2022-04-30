@@ -72,7 +72,7 @@ function Product({ data }) {
   const handleAddToCart = async () => {
     
 
-    axios.post(`http://localhost:3000/api/user/${session.user.name}/cart`, {
+    axios.post(`${process.env.BASE_URI}/api/user/${session.user.name}/cart`, {
       product_id: data._id,
       user: session.user.name,
       count: count.toString(),
