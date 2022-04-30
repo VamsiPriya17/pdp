@@ -39,7 +39,7 @@ function Product({ data }) {
     if (status === 'authenticated') {
       setUserName(session.user.name)
       fetch(
-        `${BASE_URI}/api/user/${session.user.name}`,
+        `${process.env.BASE_URI}/api/user/${session.user.name}`,
         {
           method: 'GET',
           headers: {
