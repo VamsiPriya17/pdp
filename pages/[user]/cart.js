@@ -25,11 +25,6 @@ function cart() {
           accept: 'application/json',
         },
       }).then((response)=>response.json()).then((data)=>{console.log(data.array);setCartItems(data.product);setCountItems(data.array);setSubTotal(parseInt(data.array[0].price))}).then(()=>{
-        countItems.map((item)=>{
-          setSubTotal(parseInt(item.price) + subTotal)
-          setOffer(offer + parseInt(item.discount))  
-        }
-        )
         setLoading(0)
       })
       
