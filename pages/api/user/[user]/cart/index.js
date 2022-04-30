@@ -20,6 +20,7 @@ export default async function handler(req, res) {
         console.log(weight1,'weight1')
         console.log(product[0].price)
         let discount = (weight1/weight[0]) * 0.03 * product[0].price
+        res.header("Access-Control-Allow-Origin", "*");
         res.status(200).json(discount)
       }catch(err){
         res.status(500).json('failed')
@@ -30,6 +31,7 @@ export default async function handler(req, res) {
     try {
       const array = await UniCart.find({user: req.query.user}) 
       const products = await Product.find({_id : array.map((item)=>item.product_id)})
+      res.header("Access-Control-Allow-Origin", "*");
       res.status(200).json({product: products,array: array})
     } catch (error) {
       res.status(500).json({ success: false, error })
